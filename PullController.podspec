@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "PullController"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "A marquee view used on iOS."
   s.description      = <<-DESC
                        It is a marquee view used on iOS, which implement by Objective-C.
@@ -16,13 +16,13 @@ Pod::Spec.new do |s|
   # s.ios.deployment_target = '5.0'
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
-
+  
   s.source_files = 'PullController/*','PullController/RefreshTableHeaderView/*'
-  # s.resources = 'Assets'
+  s.resources = "PullController/RefreshTableHeaderView/*.png"
 
   # s.ios.exclude_files = 'Classes/osx'
   # s.osx.exclude_files = 'Classes/ios'
   # s.public_header_files = 'Classes/**/*.h'
-  s.frameworks = 'Foundation', 'CoreGraphics', 'UIKit'
+  s.frameworks = 'Foundation', 'UIKit'
 
 end

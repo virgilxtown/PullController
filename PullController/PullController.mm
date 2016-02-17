@@ -67,21 +67,27 @@
     self = [super init];
     if (self)
     {
-        _tableViewStyle = UITableViewStylePlain;
-        _refreshIfViewAppear = YES;
+        [self initSetting];
     }
     return self;
 }
 
 - (instancetype)initAsType:(ContentViewType)type collectionLayout:(UICollectionViewLayout *)layout
 {
-    self = [self init];
+    self = [super init];
     if (self)
     {
+        [self initSetting];
         _contentViewType = type;
         _layout = layout;
     }
     return self;
+}
+
+- (void)initSetting
+{
+    _tableViewStyle = UITableViewStylePlain;
+    _refreshIfViewAppear = YES;
 }
 
 - (void)loadView
